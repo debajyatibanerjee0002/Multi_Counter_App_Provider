@@ -15,12 +15,16 @@ Widget customContainer() {
             children: [
               Text(
                 '${counterModel.getCount}',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  RaisedButton(
+                  MaterialButton(
+                    height: 50,
+                    minWidth: 100,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50)),
                     color: Colors.red[400],
                     onPressed: () {
                       Provider.of<CounterModel>(context, listen: false)
@@ -31,7 +35,11 @@ Widget customContainer() {
                       color: Colors.white,
                     ),
                   ),
-                  RaisedButton(
+                  MaterialButton(
+                    height: 50,
+                    minWidth: 100,
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(50)),
                     color: Colors.green[800],
                     onPressed: () {
                       Provider.of<CounterModel>(context, listen: false)
