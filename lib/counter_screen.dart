@@ -14,22 +14,25 @@ class CounterScreen extends StatelessWidget {
           children: [
             Expanded(
                 child: Consumer<CounterModel>(
-                    builder: (context, count, __) => customContainer(
-                        text: count.getCount.toString(),
-                        decrement: () => count.decrement(),
-                        increment: () => count.increment()))),
+                    builder: (_, count, __) => customContainer(
+                          text: count.getCountOne.toString(),
+                          decrement: () => count.decrementOne(),
+                          increment: () => count.incrementOne(),
+                        ))),
             Expanded(
                 child: Consumer<CounterModel>(
-                    builder: (context, countOne, __) => customContainer(
-                        text: countOne.getCount.toString(),
-                        decrement: () => countOne.decrement(),
-                        increment: () => countOne.increment()))),
+                    builder: (_, countOne, __) => customContainer(
+                          text: countOne.getCount.toString(),
+                          decrement: () => countOne.decrement(),
+                          increment: () => countOne.increment(),
+                        ))),
             Expanded(
                 child: Consumer<CounterModel>(
-                    builder: (context, countTwo, __) => customContainer(
-                        text: countTwo.getCount.toString(),
-                        decrement: () => countTwo.decrement(),
-                        increment: () => countTwo.increment()))),
+                    builder: (_, countTwo, __) => customContainer(
+                          text: countTwo.getCountTwo.toString(),
+                          decrement: () => countTwo.decrementTwo(),
+                          increment: () => countTwo.incrementTwo(),
+                        ))),
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
