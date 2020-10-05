@@ -15,9 +15,9 @@ class CounterScreen extends StatelessWidget {
             Expanded(
                 child: Consumer<CounterModel>(
                     builder: (_, count, __) => customContainer(
-                          text: count.getCountOne.toString(),
-                          decrement: () => count.decrementOne(),
-                          increment: () => count.incrementOne(),
+                          text: count.getCount.toString(),
+                          decrement: () => count.decrement(),
+                          increment: () => count.increment(),
                         ))),
             Expanded(
                 child: Consumer<CounterModel>(
@@ -29,9 +29,9 @@ class CounterScreen extends StatelessWidget {
             Expanded(
                 child: Consumer<CounterModel>(
                     builder: (_, countTwo, __) => customContainer(
-                          text: countTwo.getCountTwo.toString(),
-                          decrement: () => countTwo.decrementTwo(),
-                          increment: () => countTwo.incrementTwo(),
+                          text: countTwo.getCount.toString(),
+                          decrement: () => countTwo.decrement(),
+                          increment: () => countTwo.increment(),
                         ))),
           ],
         ),
