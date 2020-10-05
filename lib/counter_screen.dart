@@ -12,9 +12,24 @@ class CounterScreen extends StatelessWidget {
         backgroundColor: Colors.green[100],
         body: Column(
           children: [
-            Expanded(child: customContainer()),
-            Expanded(child: customContainer()),
-            Expanded(child: customContainer()),
+            Expanded(
+                child: Consumer<CounterModel>(
+                    builder: (context, count, __) => customContainer(
+                        text: count.getCount.toString(),
+                        decrement: () => count.decrement(),
+                        increment: () => count.increment()))),
+            Expanded(
+                child: Consumer<CounterModel>(
+                    builder: (context, countOne, __) => customContainer(
+                        text: countOne.getCount.toString(),
+                        decrement: () => countOne.decrement(),
+                        increment: () => countOne.increment()))),
+            Expanded(
+                child: Consumer<CounterModel>(
+                    builder: (context, countTwo, __) => customContainer(
+                        text: countTwo.getCount.toString(),
+                        decrement: () => countTwo.decrement(),
+                        increment: () => countTwo.increment()))),
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
